@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product list!{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Product list</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in paginator.items %}
+            <tr>
+                <th>{{ post.code }}</th>
+                <td>{{ post.name }}</td>
+                <td>{{ post.type }}</td>
+                <td>{{ post.price }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% include 'parts/paginator.html.twig' %}
+</div>
+{% endblock %}
