@@ -14,7 +14,7 @@ class Product
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $code = null;
+    private ?int $code = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -30,12 +30,12 @@ class Product
         return $this->id;
     }
 
-    public function getCode(): ?string
+    public function getCode(): ?int
     {
         return $this->code;
     }
 
-    public function setCode(string $code): static
+    public function setCode(int $code): static
     {
         $this->code = $code;
 
