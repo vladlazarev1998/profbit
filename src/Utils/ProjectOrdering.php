@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 class ProjectOrdering
 {
     private array $order_by = [
+        'id',
         'code',
         'name',
         'type',
@@ -29,6 +30,10 @@ class ProjectOrdering
 
     public function getSortByKey(?string $key = 'desc')
     {
+        if ($key === null) {
+            return 'desc';
+        }
+
         return $key === 'desc' ? 'desc' : 'asc';
     }
 

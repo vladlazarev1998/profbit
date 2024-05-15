@@ -10,6 +10,9 @@
         <thead>
         <tr>
             <th scope="col">
+                <a href="{{ projectSorting.link('id') }}">ID</a>
+            </th>
+            <th scope="col">
                 <a href="{{ projectSorting.link('code') }}">Code</a>
             </th>
             <th scope="col">
@@ -24,12 +27,13 @@
         </tr>
         </thead>
         <tbody>
-        {% for post in paginator.items %}
+        {% for product in paginator.items %}
             <tr>
-                <th>{{ post.code }}</th>
-                <td>{{ post.name }}</td>
-                <td>{{ post.type }}</td>
-                <td>{{ post.price }}</td>
+                <th>{{ product.id }}</th>
+                <th>{{ product.code }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.type }}</td>
+                <td>{{ product.price }}</td>
             </tr>
         {% endfor %}
 
