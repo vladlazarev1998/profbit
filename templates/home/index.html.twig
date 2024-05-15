@@ -9,10 +9,18 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">Code</th>
-            <th scope="col">Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Price</th>
+            <th scope="col">
+                <a href="{{ projectSorting.link('code') }}">Code</a>
+            </th>
+            <th scope="col">
+                <a href="{{ projectSorting.link('name') }}">Name</a>
+            </th>
+            <th scope="col">
+                <a href="{{ projectSorting.link('type') }}">Type</a>
+            </th>
+            <th scope="col">
+                <a href="{{ projectSorting.link('price') }}">Price</a>
+            </th>
         </tr>
         </thead>
         <tbody>
