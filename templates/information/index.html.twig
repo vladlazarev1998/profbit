@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Information!{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <h1>Information</h1>
+        {% for code, data in groupedData %}
+            <h4>Код {{ code }}: {{ data.total_count }} шт (всього), - {{ data.total_price|number_format(2, '.', ' ') }} грн (всього)</h4>
+            <ul>
+                {% for item in data.types %}
+                    <li>{{ item.type }}: {{ item.count }} шт, - {{ item.total_price|number_format(2, '.', ' ') }} грн</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

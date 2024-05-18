@@ -5,7 +5,10 @@
 {% block body %}
 
 <div class="container mt-5">
-    <h1>Product list</h1>
+    <div class="d-flex align-items-center justify-content-between">
+        <h1>Product list</h1>
+        <a class="btn btn-success" href="{{ path('information') }}">Information</a>
+    </div>
     <table class="table">
         <thead>
         <tr>
